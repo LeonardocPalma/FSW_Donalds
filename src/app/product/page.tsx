@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
-const ProdutcsPage = () => {
+const ProdutcPage = () => {
     return <div>
         <h1 className="text-red-500">Pagina de produto!</h1> 
         <Button>Teste</Button>
@@ -9,4 +9,4 @@ const ProdutcsPage = () => {
     </div>
 }
  
-export default ProdutcsPage;
+export default ProdutcPage;
