@@ -32,8 +32,6 @@ const RestaurantCategories = ({ restaurant }: RestaurantCategoriesProps) => {
   const [selectCategory, setSelectCategory] =
     useState<MenuCategoryWithProducts>(restaurant.menuCategories[0]);
 
-    
-
   const handleCategoryClick = (category: MenuCategoryWithProducts) => {
     setSelectCategory(category);
   };
@@ -80,7 +78,7 @@ const RestaurantCategories = ({ restaurant }: RestaurantCategoriesProps) => {
         <ScrollBar orientation="horizontal" />
       </ScrollArea>
 
-          <h3 className="px-5 font-semibold pt-2">{selectCategory.name}</h3>
+      <h3 className="px-5 pt-2 font-semibold">{selectCategory.name}</h3>
       <Products products={selectCategory.products} />
     </div>
   );
