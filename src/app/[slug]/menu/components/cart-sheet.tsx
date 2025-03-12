@@ -12,7 +12,7 @@ import { formatCurrency } from "@/helpers/format-currency";
 
 import { CartContext } from "../contexts/cart";
 import CartProductItem from "./cart-product-item";
-import FinishOrderDialog from "./finish-order-Dialog";
+import FinishOrderDialog from "./finish-order-dialog";
 
 const CartSheet = () => {
   const [finishOrderDialogIsOpen, setFinishOrderDialogIsOpen] = useState(false);
