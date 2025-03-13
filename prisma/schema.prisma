@@ -61,10 +61,10 @@ model Order {
   restaurant        Restaurant        @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
   restaurantId      String
   orderProducts     OrderProduct[]
-  createdAt         DateTime          @default(now())
-  updatedAt         DateTime          @updatedAt
   customerName      String
   customerCpf       String
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
 }
 
 model OrderProduct {
@@ -73,7 +73,7 @@ model OrderProduct {
   productId String
   order     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
   orderId   Int
-  quantify  Int
+  quantity  Int
   price     Float
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -82,6 +82,8 @@ model OrderProduct {
 enum OrderStatus {
   PENDING
   IN_PREPARATION
+  PAYMENT_CONFIRMED
+  PAYMENT_FAILED
   FINISHED
 }
 
